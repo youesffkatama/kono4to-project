@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>تعلم الكتاب المقدس</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -12,98 +15,63 @@
 
     <nav>
         <h2>⛪ كونشنو</h2>
-
         <h3>فريق بولس الرسول مجموعة 2</h3>
-
         <button id="menuBtn">☰</button>
     </nav>
 
-
+<div id="index">
     <section class="hero">
-
         <div class="hero-text">
-
             <h1>
                 اهلا بيكم في مشروع نهاية النشاط 
             </h1>
-
             <p>
                 اكتشف كلمة الله من خلال دروس الكتاب المقدس،
                 والقصص الملهمة، والتعلم الروحي.
                  انمو في الإيمان والرجاء ,<b>والمحبة</b>
             </p>
-
-
             <button class="learn-btn" id="learnBtn">
                 📖 ابدأ التعلم
             </button>
 
-
             <div class="learning-overlay" id="learningOverlay"></div>
-
-<div class="learning-popup" id="learningPopup">
-
-    <h2>📚 دروس الكتاب المقدس</h2>
-
-    <a href="#">✝ الصليب</a>
-
-    <a href="#">📖 كولوسي</a>
-
-    <a href="#">✝ لماذا الموت والصليب؟</a>
-
-    <a href="#">🤍 الطهارة</a>
-
-    <a href="#">👁 كحل عينيك</a>
-
-    <a href="#">📜 كورنثوس</a>
-
-
-    <button id="closeLearning">
-        إغلاق
-    </button>
-
-</div>
-
-
+            <div class="learning-popup" id="learningPopup">
+                <h2>📚 دروس الكتاب المقدس</h2>
+                <a onclick="showOnly('salyeb')">✝ الصليب</a>
+                <a onclick="showOnly('elmot_3lah_salyeb')">✝ لماذا الموت والصليب؟</a>
+                <a onclick="showOnly('intro_kronothos')">📜 كورنثوس</a>
+                <button id="closeLearning">
+                    إغلاق
+                </button>       
+            </div>
         </div>
 
 
         <div class="hero-image">
-
             <img src="https://png.pngtree.com/png-clipart/20250228/original/pngtree-a-simple-wooden-cross-draped-with-white-cloth-png-image_20533117.png" 
             alt="الكنيسة">
-
         </div>
-
-
     </section>
 
 
 
 
     <section class="about">
-
         <h2>عن الكتاب المقدس</h2>
-
         <p>
             الكتاب المقدس هو رسالة الله للبشرية.
             يعلمنا عن محبة الله ووعوده وخطته لحياتنا.
             ومن خلال قراءة الكتاب المقدس نتعلم الإيمان،
             والتسامح، والمحبة، والخير.
         </p>
-
     </section>
 
 
 
 <section class="lessons">
-
     <h2>📚 الدروس المميزة</h2>
-
     <div class="cards">
-
-
-        <div class="card">
+        <div class="card" onclick="showOnly('salyeb')" style="cursor:pointer;">
             <h3>✝ الصليب</h3>
             <p>
                 نتعلم معنى الصليب ومحبته،
@@ -111,17 +79,7 @@
             </p>
         </div>
 
-
-        <div class="card">
-            <h3>📖 كولوسي</h3>
-            <p>
-                دراسة رسالة كولوسي ومعرفة تعاليمها
-                عن حياة الإيمان والنمو الروحي.
-            </p>
-        </div>
-
-
-        <div class="card">
+        <div class="card" onclick="showOnly('elmot_3lah_salyeb')" style="cursor:pointer;">
             <h3>✝ لماذا الموت والصليب؟</h3>
             <p>
                 نفهم سبب موت المسيح على الصليب
@@ -129,26 +87,15 @@
             </p>
         </div>
 
-
-        <div class="card">
-            <h3>🤍 الطهارة</h3>
+        <div class="card" onclick="showOnly('father_mecha')" style="cursor:pointer;">
+            <h3>📜 كورنثوس</h3>
             <p>
-                نتعلم أهمية الطهارة في الفكر والقلب
-                والسلوك اليومي.
+                نبذه و ملخص عن قصه حياه القديس أبونا 
+                ميخائيل.
             </p>
         </div>
 
-
-        <div class="card">
-            <h3>👁 كحل عينيك</h3>
-            <p>
-                درس عن البصيرة الروحية وكيف نرى
-                الأمور بإيمان وحكمة.
-            </p>
-        </div>
-
-
-        <div class="card">
+        <div class="card" onclick="showOnly('intro_kronothos')" style="cursor:pointer;">
             <h3>📜 كورنثوس</h3>
             <p>
                 دراسة رسالة كورنثوس وتعاليمها
@@ -156,60 +103,859 @@
             </p>
         </div>
 
-
+        <div class="card" onclick="showOnly('ma3rafsh')" style="cursor:pointer;">
+            <h3>📜 كولوسي</h3>
+            <p>
+                راسة رسالة كولوسي ومعرفة تعاليمها       
+                عن حياة الإيمان والنمو الروحي.
+            </p>
+        </div>
     </div>
-
 </section>
 
-    </section>
-
-
     <section class="verse">
-
         <h2>
             "سراج لرجلي كلامك ونور لسبيلي"
         </h2>
-
         <p>
             مزمور 119:105
         </p>
-
     </section>
+</div>
 
     <div id="overlay"></div>
+    <div class="popup" id="popup">
+        <h2>📚 الدروس والقائمة</h2>
+        <a href="#" onclick="showOnly('salyeb')">✝ الصليب</a>
+        <a href="#" onclick="showOnly('elmot_3lah_salyeb')">✝ لماذا الموت والصليب؟</a>
+        <a href="#" onclick="showOnly('intro_kronothos')">📜 كورنثوس</a>
+        <a href="#" onclick="showOnly('father_mecha')">أبونا ميخائيل</a>
+        <a href="#" onclick="showOnly('ma3rafsh')"> كولوسي</a>
 
 
-   <div class="popup" id="popup">
+        <!--  < a href="#" onclick="showOnly('section name id ')">  title   </a>
+           TEMPLATE -->
+        <hr>
+        <a onclick="showOnly('intro_kronothos')">🙏 الطقس</a>
+        <a onclick="showIndex()">🏠 الرئيسية</a>
+        <button id="closeBtn">
+            إغلاق
+        </button>
+    </div>
+    
+<!-- mokadeamah 3n reslah kornothos  -->
+<!--##################################-->
 
-    <h2>📚 الدروس والقائمة</h2>
+<div class="container" id="intro_kronothos" style="display:none;">
+    <!-- Header Section -->
+    <header>
+        <h1>يعظم انتصارنا بالذي أحبنا</h1>
+        <p>ملخص شامل و منظم عن مقدمة <br> رسالة بولس الرسول الاولى الى اهل كورنثوس</p>
+    </header>
 
+    <!-- Section 1: Sign of the Cross -->
+    <h2 class="section-title">
+        <span>✝️</span> 
+        <strong>  بولس الرسول  </strong>
+    </h2>
+    <div class="grid">
+        <div class="card">
+            <h3>رسول ليسوع المسيح، اختاره الله ودعاه للخدمة.  </h3>
+           
+        </div>
+    </div>
 
-    <a href="#">✝ الصليب</a>
+    <!-- Section 2: Sign of the Cross -->
+    <h2 class="section-title">
+        <span>⛪</span> 
+        <strong>  كنيسة كورنثوس </strong>
+    </h2>
+    <div class="grid">
+        <div class="card">
+            <h3>يوجّه الرسالة إلى كنيسة الله والمؤمنين المقدسين في المسيح</h3>
+           
+        </div>
+    </div>
 
-    <a href="#">📖 كولوسي</a>
+    <!-- Section 3: Sign of the Cross -->
+    <h2 class="section-title">
+        <span>🙏 </span>  
+        <strong>  المؤمنون </strong>
+    </h2>
+    <div class="grid">
+        <div class="card">
+            <h3> تشمل الرسالة جميع الذين يؤمنون ويدعون باسم الرب يسوع المسيح. </h3>
+           
+        </div>
+    </div>
 
-    <a href="#">✝ لماذا الموت والصليب؟</a>
+    <!-- Section 4: Sign of the Cross -->
+    <h2 class="section-title">
+        <span>	🕊️</span>  
+        <strong>  التحية </strong>
+    </h2>
+    <div class="grid">
+        <div class="card">
+            <h3>يطلب لهم بولس النعمة والسلام من الله الآب والرب يسوع المسيح</h3>
+           
+        </div>
+    </div>
 
-    <a href="#">🤍 الطهارة</a>
+    <!-- Section 5: Sign of the Cross -->
+    <h2 class="section-title">
+        <span>		🏛️</span> 
+        <strong>  مدينة كورنثوس </strong>
+    </h2>
+    <div class="grid">
+        <div class="card">
+            <h3>مدينة مهمة وغنية ومزدهرة بسبب موقعها التجاري. </h3>
+           
+        </div>
+    </div>
 
-    <a href="#">👁 كحل عينيك</a>
+    <!-- Section 6: Sign of the Cross -->
+    <h2 class="section-title">
+        <span>	🌍 </span>  
+        <strong> سكان المدينة </strong>
+    </h2>
+    <div class="grid">
+        <div class="card">
+            <h3>عاش فيها أشخاص من خلفيات مختلفة، وانتشرت فيها العبادات الوثنية والعادات الخاطئة. </h3>
+           
+        </div>
+    </div>
 
-    <a href="#">📜 كورنثوس</a>
+    <!-- Section 7: Sign of the Cross -->
+    <h2 class="section-title">
+        <span>	✝️ </span>   
+         <strong>كرازة بولس </strong>
+    </h2>
+    <div class="grid">
+        <div class="card">
+            <h3>بشر القديس بولس أهل كورنثوس بالمسيح، فآمن كثيرون وتأسست الكنيسة</h3>
+           
+        </div>
+    </div>
 
+    <!-- Section 8: Sign of the Cross -->
+    <h2 class="section-title">
+        <span>	⚠️  </span>  
+       <strong> الانقسامات  </strong>
+    </h2>
+    <div class="grid">
+        <div class="card">
+            <h3>ظهرت مشكلات بين المؤمنين، وتعصب البعض لخدام أو قادة معينين. </h3>
+           
+        </div>
+    </div>
 
+    <!-- Section 9: Sign of the Cross -->
+    <h2 class="section-title">
+        <span>	📝   </span>   
+        <strong>هدف الرسالة</strong>   
+    </h2>
+    <div class="grid">
+        <div class="card">
+            <h3>معالجة مشكلات الكنيسة وتوجيه المؤمنين إلى الحياة المسيحية الصحيحة </h3>
+           
+        </div>
+    </div>
+
+    <!-- Section 10: Sign of the Cross -->
+    <h2 class="section-title">
+        <span>	🤝   </span>   
+        <strong>الوحدة</strong>   
+    </h2>
+    <div class="grid">
+        <div class="card">
+            <h3>المسيح هو الأساس، لذلك يجب أن يكون المؤمنون متحدين وليس منقسمين</h3>
+           
+        </div>
+    </div>
+
+    <!-- Section 11: Sign of the Cross -->
+    <h2 class="section-title">
+        <span>	❤️    </span>   
+        <strong>المحبة</strong>   
+    </h2>
+    <div class="grid">
+        <div class="card">
+            <h3>المحبة هي الأساس في تعامل المؤمنين مع بعضهم البعض. </h3>
+           
+        </div>
+    </div>
+
+    <!-- Section 12: Sign of the Cross -->
+    <h2 class="section-title">
+        <span>	🎁    </span>  
+        <strong>المواهب الروحية</strong>
+    </h2>
+    <div class="grid">
+        <div class="card">
+            <h3>كل شخص موهبته ودوره في الكنيسة، ويجب استخدامها بطريقة صحيحة </h3>
+           
+        </div>
+    </div>
+
+    <!-- Section 13: Sign of the Cross -->
+    <h2 class="section-title">
+        <span>	🚫    </span>   
+       <strong>السلوك المسيحي </strong>    
+    </h2>
+    <div class="grid">
+        <div class="card">
+            <h3>تصحيح الأخطاء والابتعاد عن الخطية والعيش في حياة صحيحة</h3>
+           
+        </div>
+    </div>
+
+    <!-- Section 14: Sign of the Cross -->
+    <h2 class="section-title">
+        <span>	✨     </span>  
+       <strong> القيامة  </strong>
+    </h2>
+    <div class="grid">
+        <div class="card">
+            <h3>التأكيد على قيامة المسيح وأهمية الإيمان بالقيامة في الحياة المسيحية</h3>
+           
+        </div>
+    </div>
+
+    <p><strong>الخلاصة</strong></p>
+    <div class="quote-box">
+        <p>رسالة بولس الأولى إلى أهل كورنثوس هي رسالة لمعالجة المشكلات والانقسامات، والدعوة إلى الوحدة والمحبة والتمسك بالمسيح، واستخدام المواهب الروحية بشكل صحيح، والابتعاد عن الخطية، والتمسك بالإيمان بالقيامة</p>
+    </div>
     <hr>
-
-
-    <a href="#">🙏  الطقس</a>
-
-
-
-    <button id="closeBtn">
-        إغلاق
-    </button>
-
-
+    <P>المصادر</P>
+    <P> كتاب مهرجان الكرازة المرقسية 2026 (المرحلة الثانوية ) </P>
 </div>
+
+
+
+<!-- lemaza elmot 3lah el salyeb  -->
+<!--##################################-->
+
+
+
+<div class="container" id="elmot_3lah_salyeb" style="display:none;">
+    <!-- Header Section -->
+    <header>
+        <h1>يعظم انتصارنا بالذي أحبنا</h1>
+        <p>ملخص شامل و منظم لموضوع <br> لماذا موت الصليب</p>
+    </header>
+
+    <!-- Section 1: Sign of the Cross -->
+    <h2 class="section-title">
+        <span>✝️</span>
+       <strong> الصليب: خطة إلهية للخلاص </strong>
+    </h2>
+    <div class="grid">
+        <div class="card">
+            <h3>الصليب جزء من خطة الله للخلاص منذ الأزل. </h3>
+        </div>
+        <div class="card">
+            <h3>	صلب المسيح تم لتحقيق الفداء وخلاص البشرية. </h3>
+           
+        </div>
+        <div class="card">
+            <h3>	اشترك اليهود في الحكم والأمم في تنفيذ الصلب. </h3>
+           
+        </div>
+    </div>
+
+    <!-- Section 2: Liturgical Aspects -->
+    <h2 class="section-title">
+        <span>☠️</span> 
+        <strong>سقوط الإنسان ودخول الموت</strong>
+    </h2>
+    <div class="grid">
+        <div class="card">
+         <h3>	خلق الله الإنسان على صورته ومثاله وفي حياة مع الله. </h3>
+        </div>
+
+        <div class="card">
+            <h3>	دخلت الخطية إلى العالم بالمعصية. </h3>
+
+        </div>
+        <div class="card">
+            <h3> 	نتج عن الخطية الموت الأدبي والجسدي.  </h3>
+
+        </div>
+        <div class="card">
+            <h3>	ظهرت الحاجة إلى الفداء والخلاص. </h3>
+            
+        </div>
+    </div>
+
+    <!-- Section 3: Doctrinal Aspects -->
+    <h2 class="section-title">
+        <span>⚖️</span> 
+        <strong>معضلة العدل الإلهي</strong>
+    </h2>
+    <div class="table-container">
+        <div class="card">
+            <h3>	الله عادل وقدوس ولا يتساهل مع الخطية.  </h3>
+            
+        </div>
+        <div class="card">
+            <h3>	الله محب ورحيم ويريد خلاص الإنسان </h3>
+            
+        </div>
+        <div class="card">
+            <h3>	لذلك كان لابد من فادٍ يتحمل العقوبة عن الإنسان.   </h3>
+            
+        </div>
+    </div>
+
+    <!-- Section 4: Spiritual Aspects -->
+    <h2 class="section-title">
+        <span>🕊️</span> 
+        <strong> صفات الفادي</strong>
+    </h2>
+    <div class="grid">
+        <div class="card">
+            <h3>	أن يكون إنسانًا. </h3>
+
+        </div>
+        <div class="card">
+            <h3>	أن يكون غير محدود. </h3>
+
+        </div>
+        <div class="card">
+            <h3>	أن يكون قدوسًا وبلا خطية. </h3>
+
+        </div>
+        <div class="card">
+            <h3>	أن يكون أقوى من الموت.  </h3>
+
+        </div>
+        <div class="card">
+            <h3>	أن يكون خالقًا وقادرًا على تجديد الإنسان.  </h3>
+
+        </div>
+        <div class="card">
+            <h3>	لذلك لم يصلح للفداء إلا الله المتجسد.   </h3>
+
+        </div>
+    </div>
+    <!-- Section 5: Spiritual Aspects -->
+    <h2 class="section-title">
+        <span>✝️</span> 
+        <strong>التجسد الإلهي</strong>
+    </h2>
+    <div class="grid">
+        <div class="card">
+            <h3>	اتخذ الله جسدًا بشريًا كاملًا بلا خطية.  </h3>
+
+        </div>
+        <div class="card">
+            <h3>	مات المسيح عن البشر ليهبهم الحياة والخلاص. </h3>
+
+        </div>
+        <div class="card">
+            <h3>		غلب بالموت الموت وسلطانه.  </h3>
+
+        </div>
+    </div>
+    <!-- Section 6: Liturgical Aspects -->
+    <h2 class="section-title">
+        <span>⛪</span> 
+        <strong>رموز الصليب في العهد القديم</strong>
+    </h2>
+    <div class="grid">
+        <div class="card">
+            <h3>	داود وجليات</h3>
+            <div class="badge-container">
+                <span class="badge">رمز لانتصار المسيح على الموت وإبليس  </span>
+            
+            </div>
+        </div>
+        <div class="card">
+            <h3>	الحية النحاسية</h3>
+            <div class="badge-container">
+                <span class="badge"> رمز للمسيح المرفوع على الصليب، والشفاء بالإيمان </span>
+            
+            </div>
+       </div>
+    </div>
+    <!-- Section 7: Spiritual Aspects -->
+    <h2 class="section-title">
+        <span>✝️❓🤔</span> 
+        <strong>لماذا الصليب بالتحديد؟ </strong>
+    </h2>
+    <div class="grid">
+        <div class="card">
+            <h3>	ليس موتًا طبيعيًا، بل ذبيحة فداء اختيارية.  </h3>
+
+        </div>
+        <div class="card">
+            <h3>	لم يُرجم أو يُطرح من الجبل حتى لا تنكسر عظامه.  </h3>
+
+        </div>
+        <div class="card">
+            <h3>	لم يُقتل بقطع الرأس حتى لا ينفصل الرأس عن الجسد.   </h3>
+
+        </div>
+        <div class="card">
+            <h3>	لم يمت بالحرق أو بوسائل أخرى، لكي يقوم بجسد كامل وتظهر آثار الصلب.    </h3>
+
+        </div>
+    </div>
+    
+    <!-- Section 8: Spiritual Aspects -->
+    <h2 class="section-title">
+        <span>✝️</span> 
+        <strong>لماذا اختار المسيح الصليب؟ </strong>
+    </h2>
+    <div class="grid">
+        <div class="card">
+            <h3>	مات علنًا أمام الجميع.  </h3>
+
+        </div>
+        <div class="card">
+            <h3>	حافظ على جسده سليمًا.   </h3>
+
+        </div>
+        <div class="card">
+            <h3>	بسط ذراعيه ليضم البشرية كلها.    </h3>
+
+        </div>
+        <div class="card">
+            <h3>	ارتفع عن الأرض ليجذب الجميع إليه.     </h3>
+
+        </div>
+        <div class="card">
+            <h3>	حمل لعنة الخطية عن البشرية.     </h3>
+
+        </div>
+        <div class="card">
+            <h3>	حمل حكم الموت عن الإنسان.      </h3>
+
+        </div>
+        <div class="card">
+            <h3>	سفك دمه من أجل غفران الخطايا.     </h3>
+
+        </div>
+    </div>
+    
+    <!-- Section 9: Spiritual Aspects -->
+    <h2 class="section-title">
+        <span>✝️</span> 
+        <strong>المعاني الروحية للصليب </strong>
+    </h2>
+    <div class="grid">
+        <div class="card">
+            <h3>	الصليب هو الطريق المؤدي إلى السماء.  </h3>
+
+        </div>
+        <div class="card">
+            <h3>	الصليب هو الموت القائم.   </h3>
+
+        </div>
+        <div class="card">
+            <h3>	المسيح هو الكاهن والذبيحة في نفس الوقت.     </h3>
+
+        </div>
+        <div class="card">
+            <h3>	الصليب طهّر الإنسان وفتح طريق الخلاص.      </h3>
+
+        </div>
+    </div>
+    
+    <!-- Section 10: Spiritual Aspects -->
+    <h2 class="section-title">
+        <span>🩹✝️</span> 
+        <strong>الصليب شفاء للإنسان</strong>
+    </h2>
+    <div class="grid">
+        <div class="card">
+            <h3>	الصليب ليس فقط لغفران الخطايا.   </h3>
+
+        </div>
+        <div class="card">
+            <h3>	هو دواء لشفاء الطبيعة البشرية التي أفسدتها الخطية.    </h3>
+
+        </div>
+        <div class="card">
+            <h3>	بالاتحاد مع المسيح ينال الإنسان الشفاء والحرية والنقاء.     </h3>
+
+        </div>
+    </div>
+    
+    <!-- Section 11: Sign of the Cross -->
+    <h2 class="section-title">
+        <span>✝️⛪</span> 
+        <strong>عمل الصليب في أسرار الكنيسة</strong>
+    </h2>
+    <div class="grid">
+        <div class="card">
+            <h3>	المعمودية </h3>
+            <p>الموت مع المسيح والقيامة خليقة جديدة</p>
+        </div>
+        <div class="card">
+            <h3>	التوبة والاعتراف </h3>
+            <p>التطهير من الخطية واسترداد السلام</p>
+        </div>
+        <div class="card">
+            <h3>	الإفخارستيا</h3>
+            <p>الاتحاد بالمسيح المصلوب والقائم ونوال الشفاء</p>
+        </div>
+    </div>
+    <p><strong>الخلاصة</strong></p>
+    <div class="quote-box">
+        <p>الصليب هو سلاحنا، وسر حياتنا وانتصارنا، وعلامة المحبة والبذل، والطريق إلى الخلاص والمجد والملكوت الأبدي.</p>
+    </div>	
+    <hr>
+    <P>المصادر</P>
+    <P> كتاب مهرجان الكرازة المرقسية 2026 (المرحلة الثانوية ) </P>
+</div>
+
+<!-- goza" el salyeb   -->
+<!--##################################-->
+
+
+    <div class="container" id="salyeb" style="display:none;">
+        
+        <!-- Header Section -->
+        <header>
+            <h1>يعظم انتصارنا بالذي أحبنا</h1>
+            <p>ملخص شامل ومُنظّم لمادة الصليب (عقيدياً، طقسياً، وروحياً)</p>
+        </header>
+
+        <!-- Section 1: Sign of the Cross -->
+        <h2 class="section-title">
+            <span>✝️</span> رشم الصليب
+        </h2>
+        <div class="grid">
+            <div class="card">
+                <h3>إعلان الإيمان</h3>
+                <p>إعلان صريح بعقيدة الثالوث القدوس (ثلاثة أقانيم في إله واحد) ووحدانية الله.</p>
+            </div>
+            <div class="card">
+                <h3>عقيدة التجسد والفداء</h3>
+                <p>تذكار نزول الله وتجسده لخلاصنا، وموته عنا للمصالحة وغفران الخطايا التي حملها على الخشبة.</p>
+            </div>
+            <div class="card">
+                <h3>النقل والافتخار</h3>
+                <p>علامة الانتقال من الظلمة إلى النور ومن عبودية إبليس إلى حرية مجد أولاد الله، وهو العلامة المميزة للمؤمنين.</p>
+            </div>
+            <div class="card">
+                <h3>القوة والبركة</h3>
+                <p>يمنح قوة لإخماد الشهوات وإبطال سلطان الخطية، وهو الجسر الذي أعاد العلاقة بين السماء والأرض.</p>
+            </div>
+        </div>
+
+        <!-- Section 2: Liturgical Aspects -->
+        <h2 class="section-title">
+            <span>⛪</span> الصليب طقسياً
+        </h2>
+        <div class="grid">
+            <div class="card">
+                <h3>يومياً</h3>
+                <div class="badge-container">
+                    <span class="badge">صلاة الساعة السادسة</span>
+                    <span class="badge">صلاة الساعة التاسعة</span>
+                </div>
+            </div>
+            <div class="card">
+                <h3>أسبوعياً</h3>
+                <div class="badge-container">
+                    <span class="badge">صوم يوم الجمعة</span>
+                    <span class="badge">تسبحة الجمعة</span>
+                </div>
+            </div>
+            <div class="card">
+                <h3>سنوياً</h3>
+                <div class="badge-container">
+                    <span class="badge">عيد الصليب (17 توت)</span>
+                    <span class="badge">عيد الصليب (10 برمهات)</span>
+                    <span class="badge">الجمعة العظيمة</span>
+                </div>
+            </div>
+            <div class="card">
+                <h3>استخدامات طقسية</h3>
+                <p>يدخل الصليب في كافة أركان الطقس: الكنيسة، المذبح، الصلوات، الملابس الكنسية، والبخور.</p>
+            </div>
+        </div>
+
+        <!-- Section 3: Doctrinal Aspects -->
+        <h2 class="section-title">
+            <span>📖</span> الصليب عقيدياً
+        </h2>
+        
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>شرطا الموت المحيي (البابا أثناسيوس)</th>
+                        <th>التفسير والسبب</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>موت بأيدي بشر (By Human Hands)</strong></td>
+                        <td>لأن المسيح هو "الحياة"، ولا يمكن للمرض أو الضعف أن يقهره. كان يجب أن يُسلم للموت بإرادته وبأيدي آخرين ليقهر الموت.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>موت علني (Public Death)</strong></td>
+                        <td>لتكون قيامته حقيقة مؤكدة يراها ويشهد لها الجميع، ودليلاً قاطعاً على جبل الجلجثة.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 style="color: var(--primary); margin: 20px 0 10px 0;">لماذا الصليب تحديداً؟ (أسباب الفداء بالصليب)</h3>
+        <div class="grid">
+            <div class="card">
+                <h3>1. شجرة الخلاص</h3>
+                <p>مقابل شجرة السقوط: السقوط جاء بثمرة أكلناها فمتنا، والخلاص جاء بثمرة معلقة على شجرة نأكلها فنحيا.</p>
+            </div>
+            <div class="card">
+                <h3>2. البركة أمام اللعنة</h3>
+                <p>المسيح افتدانا من لعنة الناموس إذ صار لعنة لأجلنا، فرفعت اللعنة وصارت الخشبة ينبوع بركة.</p>
+            </div>
+            <div class="card">
+                <h3>3. الإحتضان</h3>
+                <p>الموت صلباً هو الميتة الوحيدة التي يفتح فيها الإنسان يديه، ليبسط يديه ويجتذب الشعوب ويوحدهم فيه.</p>
+            </div>
+            <div class="card">
+                <h3>4. تطهير الهواء</h3>
+                <p>صُلِب معلقاً في الهواء لهزيمة الشيطان ("رئيس سلطان الهواء") وتطهير الهواء وفتح الطريق للسماء.</p>
+            </div>
+            <div class="card">
+                <h3>5. حفظ الجسد (الوحدة)</h3>
+                <p>لم تُكسر عظامه ليتم الكتاب ("عظم لا يُكسر منه") ولإعلان وحدة الكنيسة وعدم انقسامها.</p>
+            </div>
+            <div class="card">
+                <h3>6. تحقيق النبوات وسفك الدم</h3>
+                <p>تحققت النبوات (ثقبوا يدي ورجلي)، وبدون سفك دم لا تحصل مغفرة، مع اختيار أشنع ميتة لإثبات أعظم محبة.</p>
+            </div>
+        </div>
+
+        <!-- Section 4: Spiritual Aspects -->
+        <h2 class="section-title">
+            <span>🌱</span> الصليب روحياً (الفهم الروحي للتجارب)
+        </h2>
+        <div class="grid">
+            <div class="card">
+                <h3>تجارب للتنقية</h3>
+                <p>لتطهير الأبرار من "البر الذاتي".</p>
+                <div class="quote-box">مثال: أيوب الصديق</div>
+            </div>
+            <div class="card">
+                <h3>تجارب للتوبة</h3>
+                <p>لتنبيه الإنسان البعيد ليعود إلى حضن الله.</p>
+                <div class="quote-box">مثال: الابن الضال</div>
+            </div>
+            <div class="card">
+                <h3>تجارب للوقاية</h3>
+                <p>لحماية المؤمن من الكبرياء الناتج عن النجاح أو المواهب.</p>
+                <div class="quote-box">مثال: شوكة بولس الرسول</div>
+            </div>
+            <div class="card">
+                <h3>تجارب للتزكية</h3>
+                <p>لاختبار مدى أمانة المؤمن وتسليمه لله.</p>
+                <div class="quote-box">مثال: تجربة إبراهيم</div>
+            </div>
+        </div>
+</div>
+
+
+
+
+
+
+<!-- lemaza elmot 3lah el salyeb  -->
+<!--##################################-->
+
+<div class="container" id="father_mecha" style="display:none;">
+        
+    <!-- Header Section -->
+    <header>
+        <h1>القمص ميخائيل إبراهيم (1899-1975)</h1>
+        <p>نموذج للكاهن الراعي — إبراز مسيرة حياته وقداسته وخدمته الروحية</p>
+    </header>
+
+    <!-- Section 1: Life & Vocation -->
+    <h2 class="section-title">
+        <span>🌱</span> النشأة والخدمة قبل الكهنوت
+    </h2>
+    <div class="grid">
+        <div class="card">
+            <h3>أولاً: النشأة والتكوين الروحي</h3>
+            <p>ولد سنة 1899 ونشأ في بيئة اتسمت بالإيمان والبساطة. اتسم بالهدوء وقلة الكلام، وعرف الالتزام الروحي المبكر والارتباط بالصلاة والكتاب المقدس قبل الكهنوت.</p>
+        </div>
+        <div class="card">
+            <h3>ثانياً: العمل قبل الكهنوت</h3>
+            <p>عمل في الحياة المدنية واشترك في الجمعيات وتأسيس الكنائس. ظهر اهتمامه بخدمة الشعب والاجتماعات الروحية، فكانت مدرسة عملية شكلت نجاحه الرعوي.</p>
+        </div>
+        <div class="card">
+            <h3>ثالثاً: الدعوة إلى الكهنوت</h3>
+            <p>لم يأتِ الكهنوت عن طموح شخصي بل استجابة لدعوة إلهية. دخل الكهنوت بروح الاتضاع والخوف المقدس، ينظر إليه كمسؤولية ثقيلة تتطلب صلاة وتضحية.</p>
+        </div>
+        <div class="card">
+            <h3>رابعاً: خدمته الأولى</h3>
+            <div class="badge-container">
+                <span class="badge">بلبيس (بناء الإنسان)</span>
+                <span class="badge">ههيا (تأثير الأسر والشباب)</span>
+                <span class="badge">كفر عبده (مرشد وأب اعتراف)</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 2: Shubra & Pastoral Characteristics -->
+    <h2 class="section-title">
+        <span>⛪</span> الخدمة في شبرا وسمات الرعاية
+    </h2>
+    <div class="grid">
+        <div class="card">
+            <h3>خامساً: كنيسة مار مرقس بشبرا</h3>
+            <p>تحولت الكنيسة في عهده إلى مركز روحي يقصده الآلاف. حرص على معرفة كل فرد شخصياً كابن يحتاج رعاية، ودُشنت لاحقاً كنيسة باسمه في ذات الموقع.</p>
+        </div>
+        <div class="card">
+            <h3>1. رجل الصلاة والإيمان</h3>
+            <p>كانت الصلاة بالنسبة له أسلوب حياة؛ يقضي ساعات طويلة في القداس والتسبحة والصلوات الخاصة.</p>
+        </div>
+        <div class="card">
+            <h3>2. محبة الفقراء والعطاء</h3>
+            <p>اعتبر خدمة المحتاجين جزءاً لا يتجزأ من العبادة، واشتهر بعطائه السخي في الخفاء حتى في أوقات ضيقه.</p>
+        </div>
+        <div class="card">
+            <h3>3. الأبوة الروحية</h3>
+            <p>كان أباً روحيًا حقيقيًا وليس مجرد مديراً للأسرار؛ اعتراف على يديه الكثيرون ومنهم البابا شنودة الثالث.</p>
+        </div>
+    </div>
+
+    <!-- Section 3: Spiritual Situations & Stories -->
+    <h2 class="section-title">
+        <span>📖</span> مواقف حقيقية وقصص من حياته
+    </h2>
+    
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>الموقف / القصة</th>
+                    <th>التفاصيل والدرس الروحي</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>التواضع في الهيكل</strong></td>
+                    <td>بعدما انتهر طفلاً يركض في المذبح، عمل له "ميطانية" بعد القداس طالباً المسامحة، موضحاً أنه رأى ملاكاً يرفع الطلبات اختفى عند انتهاره للطفل.</td>
+                </tr>
+                <tr>
+                    <td><strong>قصة المكوجي</strong></td>
+                    <td>عندما سُرقت بدلتهم قبل الكهنوت عند المكوجي، دفع له أجرة الكي قائلاً: "أنا لا أستحل أن أحرمك من أجرة تعبك"، فذهل الرجل من التصرف.</td>
+                </tr>
+                <tr>
+                    <td><strong>وفاة ابنه البكر</strong></td>
+                    <td>أظهر إيماناً عجيباً وتسليماً كاملاً لمشيئة الله عند وفاة ابنه، وكان مثالاً حياً للثقة بالله وقت التجربة.</td>
+                </tr>
+                <tr>
+                    <td><strong>العطاء في الخفاء</strong></td>
+                    <td>أرسل معترفاً بطرد ملابس لعنوان بالفجالة وقال له: "إن قال لك مين بعته؟ قل له يسوع ولا تذكر أحداً"، وحزن عندما انتظر الشاب حتى فتح الطرد.</td>
+                </tr>
+                <tr>
+                    <td><strong>قصة مجدي يسي (السجن)</strong></td>
+                    <td>أرشد شاباً محكوماً عليه بالاعتراف بكامل جرائمه ليضمن الخلاص ("تطلع براءة ولا تروح السما؟")، فاعترف وسار للمشنقة يبتسم بسلام كاللص اليمين.</td>
+                </tr>
+                <tr>
+                    <td><strong>افتقاد الرافضين</strong></td>
+                    <td>استقبل رجل رافض للوعظ بابتسامة وطلب ماء فقط، ثم سجد عند قدميه شاكراً، فانكسر كبرياء الرجل وبكى تائباً وعاد للكنيسة.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3 style="color: var(--primary); margin: 20px 0 10px 0;">علامة الصليب في حياته اليومية</h3>
+    <div class="grid">
+        <div class="card">
+            <h3>1. عند استخدام الهاتف</h3>
+            <p>يرشم قرص التليفون بعلامة الصليب قبل إدارته لكي يستخدم الرب المكالمة من أجل البركة.</p>
+        </div>
+        <div class="card">
+            <h3>2. وسائل المواصلات</h3>
+            <p>عند مغادرة الترام أو الأتوبيس يلتفت إليه ويرشم الصليب شاكراً الله وداعياً لحفظ الركاب.</p>
+        </div>
+        <div class="card">
+            <h3>3. تهدئة الغضب</h3>
+            <p>يرشم جبهة أي شخص يأتي إليه منفصلاً أو غاضباً ويضغط بإصبعه ثلاث مرات ليرجع لهدوئه وقوته.</p>
+        </div>
+    </div>
+
+    <!-- Section 4: Trials, Departure & Sainthood -->
+    <h2 class="section-title">
+        <span>✨</span> التجارب، النياحة، وإعلان القداسة
+    </h2>
+    <div class="grid">
+        <div class="card">
+            <h3>التجارب والضيقات</h3>
+            <p>واجه المرض وفقد الأحباء والضغوط الرعوية بروح التسليم. لم تكن الضيقة سبباً للتذمر بل مناسبة للصلاة والنمو الروحي.</p>
+            <div class="quote-box">"احتماله للإهانات والصمت كان أبرز مظاهر نضجه الروحي"</div>
+        </div>
+        <div class="card">
+            <h3>نياحته (1975)</h3>
+            <p>تنيح بعد حياة امتدت 76 عاماً قضى معظمها في الخدمة، وترك أثراً بالغاً وسيرة فضائل عاطرة استمرت عبر الأجيال.</p>
+            <div class="quote-box">"فقدت الكنيسة أباً حقيقياً استمرت سيرته حاضرة بقوة"</div>
+        </div>
+        <div class="card">
+            <h3>إعلان قداسته (مايو 2026)</h3>
+            <p>أقر المجمع المقدس للكنيسة القبطية الأرثوذكسية قداسته رسمياً تتويجاً لمسيرة طويلة من الشهادة الروحية والخدمة الأمينة.</p>
+            <div class="quote-box">"اعتراف كنسي بما تركه من تأثير روحي ونموذج عملي للكهنوت"</div>
+        </div>
+    </div>
+</div>
+
+<div id="ma3rafsh" style="display:none;">
+    <h1 id="identity">علاج انقسامات وحزبيات في كنيسة كورنثوس وتركز علي اهمية صليب المسيح والفرق بين الحكمة البشرية والحكمة الالاهية ومفهوم الخدمة الحقيقى </h1>
+    <h3 id="identity2">الأصحاح الأول: الانقسامات وعظمة الصليب</h3>
+    <hr>
+    <ol id="list">
+    <li>التحية والشكر:</li>
+    <p>يبدأ بولس الرسول بالسلام لأهل كورنثوس وكان يذكرهم دائماً ويشكر الله على النعم والمواهب الروحية اللي عندهم.</p>
+    <li>مشكلة التحزب والانقسام:</li>
+    <p>ينتقد بولس الانقسامات اللي كانت في الكنيسة، حيث تحزب المؤمنون لأسماء معينة (شوية بيقول "أنا لبولس"، وشوية "أنا لأبلوس"، و "أنا لصفا"، و "أنا للمسيح"). ويؤكد أن المسيح لا يتجزأ وأننا كلنا اعضاء في جسد المسيح وكلنا خدام للمسيح.</p>
+    <li>قوة الصليب وحكمة الله:</li>
+    <p>بيوضح أن كرازة الصليب هي عند الهالكين جهالة، وأما عند المخلصين فهي "قوة الله". حكمة العالم عاجزة عن معرفة الله، عشان كده اختار الله جهلاء العالم والضعاف ليخزي الأقوياء والحكماء، عشان ميفتخرش أي حد أمامه.</p>
+    </ol>
+    <h3 id="identity2">الأصحاح الثاني: الكرازة بالروح القدس وحكمة الله المنشأة</h3>
+    <hr>
+    <ol id="list">
+    <li>أسلوب كرازة بولس:</li>
+    <p>كان بيفكرهم بولس بأنه لما جه ليهم مجاش بأسلوب الكلام البلاغي أو الحكمة البشرية، بل بعزم أن يكونش معروف بينهم إلا "يسوع المسيح وهو المصلوب"، وكانت خدمته ببرهان الروح والقوة ومش بكلام الحكمة الإنسانية.</p>
+    <li>الحكمة المكتومة (حكمة الله):</li>
+    <p>بيتكلم عن الحكمة الروحية العميقة اللي بيعلنها الروح القدس للناس، وهي حكمة ميعرفهاش رؤساء الدهر ده (وعشان كده صلبوا رب المجد)</p>
+    <li>الإنسان الجسداني والإنسان الروحي:</li>
+    <p>بيوضح أن "الإنسان الطبيعي (الجسداني)" ميقبلش اللي لروح الله لأنه عنده جهالة، لكن "الإنسان الروحي" بيفحص كل شيء ويحكم فيه بالروح القدس اللي يفحص أعماق الله</p>
+    </ol>
+    <h3 id="identity2">الأصحاح الثالث: النمو الروحي وبناء هيكل الله</h3>
+    <hr>
+    <ol id="list">
+    <li>الأطفال في المسيح:</li>
+    <p>بيعاتبهم بولس بسبب انهم لسه جسدانيين وبيسلكوا بحسب البشر بسبب الغيرة والخصام، فمقدرش أنه يكلمهم كروحيين دا هو كلمهم كأطفال محتاجين لللبن مش الاكل القوي</p>
+    <li>الخدام هم مجرد أدوات:</li>
+    <p>بيوضح دور الخدام؛ فبولس غرس وأبلوس سقى، لكن الله هو اللي بينمي. الخدام هم بيعملوا مع الله بس</p>
+    <li>المسيح هو الأساس الوحيد:</li>
+    <p>بيؤكد أن يسوع المسيح هو الأساس الوحيد المضمون للكنيسة. وكل خادم يبني على هذا الأساس (بذهب، فضة، حجارة كريمة، أو خشب، حطب، قش)، وستمتحن أعمال الكل فالمطهر/النار يوم الرب</p>
+    <li>أنتم هيكل الله:</li>
+    <p>بيفكرهم بأنهم هيكل الله وروحه يسكن فيهم، واللي بيفسد هيكل الله يفسده الله</p>
+    </ol>
+    <h3 id="identity2">الأصحاح الرابع: أمانة الخادم وتواضعه</h3>
+    <hr>
+    <ol id="list">
+    <li>وكلاء أسرار الله:</li>
+    <p>لازم يتحسب الخدام كـ "وكلاء لأسرار الله"، والمطلوب في الوكيل أنه يكون أميناً. ومش بيهتم بولس بدينونة البشر له، بل بالرب اللي بيدين ويكشف خفايا القلوب</p>
+    <li>التواضع مقابل الكبرياء:</li>
+    <p>بينتقد كبرياء شوية من أهل كورنثوس واعتدادهم بنفسهم وكأنهم ملكوا وشبعوا، وفنفس الوقت الرسل بقوا كمنحورين ومشهداً للعالم والملائكة والناس (بيحتملون الجوع، العري، الشتم، والاضطهاد من أجل المسيح)</p>
+    <li>الأبوة الروحية:</li>
+    <p>بيوضح بولس أنه مش بيكتب ده عشان يكسفهم، بل عشان يرشدهم كأولاد أحباء، فهو أبوهم الروحي في المسيح من خلال الإنجيل. وبيختم بتنبيهم أنه جاي ليهم قريب عشان يختبر مش بكلام المستكبرين بل قوتهم</p>
+    </ol>
+    <h4 id="identity3">الفكرة المحورية العامة للأصحاحات (1-4)</h4>
+    <hr>
+    <p id="conclusion">ان علاج الانقسامات الكنسية والكبرياء من خلال التركيز على قوة الصليب، والاتضاع، وأن المسيح هو الأساس، وأن كل الخدام مجرد أدوات في يد الله</p>
+</div>
+
 
     <footer>
 
