@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1e3a5f"/>
+      <stop offset="1" stop-color="#0f2239"/>
+    </linearGradient>
+    <radialGradient id="halo" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#ffd97a" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#ffd97a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="480" height="300" fill="url(#bg)"/>
+  <circle cx="240" cy="118" r="95" fill="url(#halo)"/>
+  <circle cx="240" cy="118" r="47" fill="#e8c36a" stroke="#b98a2f" stroke-width="2"/>
+  <circle cx="240" cy="118" r="30" fill="#d9a066"/>
+  <path d="M208 122 q0 30 32 32 q32 -2 32 -32 q-16 12 -32 10 q-16 2 -32 -10z" fill="#b98a2f"/>
+  <path d="M158 300 Q180 190 240 185 Q300 190 322 300 Z" fill="#3a5a8c"/>
+  <path d="M200 300 Q215 220 240 215 Q265 220 280 300 Z" fill="#f0ede6"/>
+  <g transform="translate(345 55) rotate(18)">
+    <rect x="-4" y="0" width="8" height="125" fill="#c8d0da" rx="4"/>
+    <rect x="-9" y="125" width="18" height="9" fill="#b98a2f"/>
+    <rect x="-3" y="-18" width="6" height="20" fill="#8a6d2b"/>
+  </g>
+  <g transform="translate(132 148)">
+    <rect x="0" y="0" width="52" height="82" fill="#f3ead6" rx="6"/>
+    <rect x="0" y="0" width="52" height="15" fill="#e0d0a8" rx="6"/>
+    <rect x="0" y="67" width="52" height="15" fill="#e0d0a8" rx="6"/>
+    <line x1="8" y1="32" x2="44" y2="32" stroke="#8a6d2b" stroke-width="2"/>
+    <line x1="8" y1="43" x2="44" y2="43" stroke="#8a6d2b" stroke-width="2"/>
+    <line x1="8" y1="54" x2="34" y2="54" stroke="#8a6d2b" stroke-width="2"/>
+  </g>
+  <text x="240" y="288" text-anchor="middle" font-family="'Segoe UI', Tahoma, sans-serif" font-size="24" fill="#ffd97a" font-weight="bold">القديس بولس الرسول</text>
+</svg>

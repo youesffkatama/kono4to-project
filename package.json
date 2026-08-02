@@ -1,0 +1,27 @@
+{
+  "name": "ai-test-",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/youesffkatama/ai-test-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/youesffkatama/ai-test-/issues"
+  },
+  "homepage": "https://github.com/youesffkatama/ai-test-#readme",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.19.0",
+    "node-fetch": "^2.7.0"
+  }
+}
